@@ -1,0 +1,46 @@
+{
+  "screens" : [
+    {
+      "name": "Home",
+      "components": [
+        {
+          "id": "unique_component_id",
+          "type": "accordion",
+          "build_info": {
+            "key": "value",
+            "key2": "value2"
+          },
+          "service_uri": "/relative-uri"
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "components": [
+        {
+          "id": "unique_component_id",
+          "type": "accordion",
+          "build_info": {
+            "key": "value",
+            "key2": "value2"
+          },
+          "service_uri": "/relative-uri"
+        }
+      ]
+    },
+    {
+      "name": "ContactUs",
+      "components": [
+        {
+          "id": "unique_component_id",
+          "type": "accordion",
+          "build_info": {
+            "key": "value",
+            "key2": "value2"
+          },
+          "service_uri": "/relative-uri"
+        }
+      ]
+    }
+  ]
+}

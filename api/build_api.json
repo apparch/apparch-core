@@ -1,0 +1,18 @@
+{
+  "screens" : [
+    {
+      "name": "Home",
+      "components": [
+        {
+          "id": "unique_component_id",
+          "type": "accordion",
+          "build_info": {
+            "key": "value",
+            "key2": "value2"
+          },
+          "service_uri": "/relative-uri"
+        }
+      ]
+    }
+  ]
+}

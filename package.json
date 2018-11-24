@@ -1,0 +1,28 @@
+{
+  "name": "apparch-core",
+  "description": "App Arch Core package",
+  "version": "0.0.1",
+  "main": "index.js",
+  "keywords": [
+    "React",
+    "Native",
+    "Base",
+    "Framework",
+    "android",
+    "ios",
+    "react-native",
+    "native-modules",
+    "react-components"
+  ],
+  "author": "Mahmoud Zayed",
+  "license": "ISC",
+  "homepage": "https://github.com/apparch/apparch-core#readme",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apparch/apparch-core.git"
+  },
+  "dependencies": {
+    "native-base": "^2.8.1"
+  }
+}
