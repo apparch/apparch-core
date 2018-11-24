@@ -14,6 +14,9 @@
             {
               "id": "unique_component_id",
               "type": "content",
+              "setting": {
+                "padder": "true"
+              },
               "components": [
                 {
                   "id": "unique_component_id",

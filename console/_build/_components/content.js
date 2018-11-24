@@ -16,6 +16,9 @@ module.exports = function (component) {
   // Build
   this.build = function () {
     let content = '\t\t\t\t<Content>\r\n';
+    if (component.setting.padder) {
+      content = '\t\t\t\t<Content padder>\r\n';
+    }
 
     // Check nested
     if (component.components) {
