@@ -1,6 +1,6 @@
-const CONSOLE_COLOR = '\x1b[36m%s\x1b[0m'; //cyan
-const CONSOLE_CONFIG = require("../console_config");
-const BUILD_API = CONSOLE_CONFIG.BUILD_API;
+const CONSOLE = require("../console_config");
+const BUILD_API = CONSOLE.BUILD_API;
+const COMPONENTS = require("./components");
 
 fs = require('fs');
 const Config = require("../../../../src/config/config");
@@ -13,6 +13,9 @@ Screens.forEach(function(screen) {
 
   // Import Basic components.
   fileText += 'import React from "react";\r\n';
+
+  // Import Dependancy components
+  fileText += COMPONENTS.importer(screen.components);
 
   // Import Dependancy components.
   fileText += 'import { Container } from "native-base";\r\n';
@@ -29,10 +32,14 @@ Screens.forEach(function(screen) {
   fileText += '\trender() {\r\n';
   // Open return function.
   fileText += '\t\treturn (\r\n';
+
   // Open Container component.
   fileText += '\t\t\t<Container>\r\n';
 
   fileText += '\t\t\t\t<Header {...this.props} title="' + screen.name + '"/>\r\n';
+
+  // Build Components
+  fileText += '\t\t' + COMPONENTS.builder(screen.components);
 
   // Close Container component.
   fileText += '\t\t\t</Container>\r\n';
@@ -54,7 +61,7 @@ Screens.forEach(function(screen) {
   // Write the file.
   fs.writeFile(Config.MAP_DIR + '/_screens/' + screenClass + '.js', fileText, function (err) {
     if (err) return console.log(err);
-    console.log(CONSOLE_COLOR, 'Screen "' + screenClass + '" created successfully');
+    console.log(CONSOLE.COLOR.yellow, 'Screen "' + screenClass + '" created successfully');
   });
 
 });

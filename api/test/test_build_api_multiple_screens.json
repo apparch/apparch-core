@@ -6,10 +6,15 @@
         {
           "id": "unique_component_id",
           "type": "accordion",
-          "build_info": {
-            "key": "value",
-            "key2": "value2"
+          "setting": {
+            "icon": "ios-add",
+            "expandedIcon": "ios-remove"
           },
+          "data": [
+            { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
+            { "title": "Second Element", "content": "Lorem ipsum dolor sit amet" },
+            { "title": "Third Element", "content": "Lorem ipsum dolor sit amet" }
+          ],
           "service_uri": "/relative-uri"
         }
       ]
@@ -20,24 +25,11 @@
         {
           "id": "unique_component_id",
           "type": "accordion",
-          "build_info": {
-            "key": "value",
-            "key2": "value2"
-          },
-          "service_uri": "/relative-uri"
-        }
-      ]
-    },
-    {
-      "name": "ContactUs",
-      "components": [
-        {
-          "id": "unique_component_id",
-          "type": "accordion",
-          "build_info": {
-            "key": "value",
-            "key2": "value2"
-          },
+          "data": [
+            { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
+            { "title": "Second Element", "content": "Lorem ipsum dolor sit amet" },
+            { "title": "Third Element", "content": "Lorem ipsum dolor sit amet" }
+          ],
           "service_uri": "/relative-uri"
         }
       ]

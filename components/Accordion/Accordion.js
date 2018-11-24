@@ -6,24 +6,24 @@ class Accordion extends Component {
     /*
      * With custom icons.
      */
-    if (this.props.data.icon && this.props.data.expandedIcon) {
-      return (
-        <BaseAccordion
-          dataArray={this.props.data.rows}
-          expanded={0}
-          icon={this.props.data.icon}
-          expandedIcon={this.props.data.expandedIcon}
-        />
-      );
-    }
-
-    /*
-     * Simple.
-     */
     return (
       <BaseAccordion
-        dataArray={this.props.data.rows}
+        dataArray={this.props.data}
         expanded={0}
+
+        // Icon
+        icon={
+          this.props.setting && this.props.setting.icon && this.props.setting.expandedIcon
+          ? this.props.setting.icon
+          : undefined
+        }
+
+        // Expanded icon
+        expandedIcon={
+          this.props.setting && this.props.setting.icon && this.props.setting.expandedIcon
+          ? this.props.setting.expandedIcon
+          : undefined
+        }
       />
     );
   }

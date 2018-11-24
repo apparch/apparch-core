@@ -1,6 +1,5 @@
-const CONSOLE_COLOR = '\x1b[33m%s\x1b[0m'; //yellow
-const CONSOLE_CONFIG = require("../console_config");
-const BUILD_API = CONSOLE_CONFIG.BUILD_API;
+const CONSOLE = require("../console_config");
+const BUILD_API = CONSOLE.BUILD_API;
 
 fs = require('fs');
 const Config = require("../../../../src/config/config");
@@ -36,5 +35,5 @@ fileText += 'export default createDrawerNavigator(Screens);\r\n';
 // Write the file.
 fs.writeFile(Config.MAP_DIR+'/_navigation.js', fileText, function (err) {
   if (err) return console.log(err);
-  console.log(CONSOLE_COLOR, 'Config "navigation" created successfully');
+  console.log(CONSOLE.COLOR.cyan, 'Config "navigation" created successfully');
 });

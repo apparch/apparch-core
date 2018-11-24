@@ -13,8 +13,10 @@ const data = {
 
 // With custom icons.
 const data2 = {
-  icon: 'ios-add',
-  expandedIcon: 'ios-remove',
+  setting: {
+    icon: 'ios-add',
+    expandedIcon: 'ios-remove',
+  },
   rows: [
     { title: "First Element", content: "Lorem ipsum dolor sit amet" },
     { title: "Second Element", content: "Lorem ipsum dolor sit amet" },
@@ -33,8 +35,8 @@ class ExampleAccordionScreen extends React.Component {
       <Container>
         <Header {...this.props} title="Accordion"/>
         <Content padder>
-          <Accordion data={data} expanded={0}/>
-          <Accordion data={data2} expanded={0}/>
+          <Accordion data={data.rows} />
+          <Accordion data={data2.rows} setting={data.setting} />
         </Content>
       </Container>
     );
