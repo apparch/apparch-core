@@ -17,12 +17,6 @@ Screens.forEach(function(screen) {
   // Import Dependancy components
   fileText += COMPONENTS.importer(screen.components);
 
-  // Import Dependancy components.
-  fileText += 'import { Container } from "native-base";\r\n';
-
-  // Import AppArch components.
-  fileText += 'import { Header } from "apparch-core";\r\n';
-
   // New line.
   fileText += '\r\n';
 
@@ -33,16 +27,9 @@ Screens.forEach(function(screen) {
   // Open return function.
   fileText += '\t\treturn (\r\n';
 
-  // Open Container component.
-  fileText += '\t\t\t<Container>\r\n';
-
-  fileText += '\t\t\t\t<Header {...this.props} title="' + screen.name + '"/>\r\n';
-
   // Build Components
   fileText += '\t\t' + COMPONENTS.builder(screen.components);
 
-  // Close Container component.
-  fileText += '\t\t\t</Container>\r\n';
   // Close return function.
   fileText += '\t\t);\r\n';
   // Close render function.
