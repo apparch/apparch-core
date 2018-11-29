@@ -3,7 +3,7 @@ const BUILD_API = CONSOLE.BUILD_API;
 const COMPONENTS = require("./components");
 
 fs = require('fs');
-const Config = require("../../../../src/config/config");
+const Config = require("../../../../src/config");
 const Screens = BUILD_API.screens;
 
 // Loop through screens
@@ -46,9 +46,9 @@ Screens.forEach(function(screen) {
   fileText += '\r\n';
 
   // Write the file.
-  fs.writeFile(Config.MAP_DIR + '/_screens/' + screenClass + '.js', fileText, function (err) {
+  fs.writeFile(Config.BUILD_DIR + '/_screens/' + screenClass + '.js', fileText, function (err) {
     if (err) return console.log(err);
-    console.log(CONSOLE.COLOR.yellow, 'Screen "' + screenClass + '" created successfully');
+    console.log(CONSOLE.COLOR.yellow, 'Screen "' + screenClass + '" created successfully!');
   });
 
 });

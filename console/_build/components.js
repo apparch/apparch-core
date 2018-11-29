@@ -27,7 +27,12 @@ let importer = function (components) {
         break;
     }
   });
-  return import_text;
+
+  let import_array = import_text.split("\n");
+  let unique_import_array = [...new Set(import_array)];
+  let filterd_import_text = unique_import_array.join("\n");
+  console.log(filterd_import_text);
+  return filterd_import_text;
 }
 
 /*

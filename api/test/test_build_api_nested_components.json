@@ -30,6 +30,19 @@
                     { "title": "Second Element", "content": "Lorem ipsum dolor sit amet" }
                   ],
                   "service_uri": "/relative-uri"
+                },
+                {
+                  "id": "unique_component_id",
+                  "type": "accordion",
+                  "setting": {
+                    "icon": "ios-add",
+                    "expandedIcon": "ios-remove"
+                  },
+                  "data": [
+                    { "title": "First Element", "content": "Lorem ipsum dolor sit amet" },
+                    { "title": "Second Element", "content": "Lorem ipsum dolor sit amet" }
+                  ],
+                  "service_uri": "/relative-uri"
                 }
               ]
             }
