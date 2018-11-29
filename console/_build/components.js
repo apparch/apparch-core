@@ -2,6 +2,8 @@
 let Container = require('./_components/container');
 let Header = require('./_components/header');
 let Content = require('./_components/content');
+let Form = require('./_components/form/form');
+let Input = require('./_components/form/input');
 let Accordion = require('./_components/accordion');
 
 /*
@@ -22,6 +24,14 @@ let importer = function (components) {
       case "content":
         import_text += new Content(component).import();
         break;
+      // Start Form.
+      case "form":
+        import_text += new Form(component).import();
+        break;
+      case "input":
+        import_text += new Input(component).import();
+        break;
+      // End Form.
       case "accordion":
         import_text += new Accordion(component).import();
         break;
@@ -31,7 +41,6 @@ let importer = function (components) {
   let import_array = import_text.split("\n");
   let unique_import_array = [...new Set(import_array)];
   let filterd_import_text = unique_import_array.join("\n");
-  console.log(filterd_import_text);
   return filterd_import_text;
 }
 
@@ -53,6 +62,14 @@ let builder = function (components) {
       case "content":
         build_text += new Content(component).build();
         break;
+      // Start Form.
+      case "form":
+        build_text += new Form(component).build();
+        break;
+      case "input":
+        build_text += new Input(component).build();
+        break;
+      // End Form.
       case "accordion":
         build_text += new Accordion(component).build();
         break;

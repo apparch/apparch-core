@@ -1,0 +1,45 @@
+{
+  "screens" : [
+    {
+      "name": "Home",
+      "components": [
+        {
+          "id": "unique_component_id",
+          "type": "container",
+          "components": [
+            {
+              "id": "unique_component_id",
+              "type": "header"
+            },
+            {
+              "id": "unique_component_id",
+              "type": "content",
+              "setting": {
+                "padder": "true"
+              },
+              "components": [
+                {
+                  "id": "unique_component_id",
+                  "type": "form",
+                  "service_uri": "/relative-uri",
+                  "components": [
+                    {
+                      "id": "unique_component_id",
+                      "type": "input",
+                      "setting": {
+                        "label": "Username",
+                        "labelType": "fixed",
+                        "placeholder":"Please enter your username.",
+                        "last": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
