@@ -20,14 +20,18 @@ Screens.forEach(function(screen) {
   // New line.
   fileText += '\r\n';
 
-  // Open screen class
+  // Open screen class.
   fileText += 'class ' + screenClass + ' extends React.Component {\r\n';
+
+  // Functions build.
+  fileText += '\t\t' + COMPONENTS.functionsBuilder(screen.components);
+
   // Open render function.
   fileText += '\trender() {\r\n';
   // Open return function.
   fileText += '\t\treturn (\r\n';
 
-  // Build Components
+  // Build Components.
   fileText += '\t\t' + COMPONENTS.builder(screen.components);
 
   // Close return function.

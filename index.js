@@ -2,6 +2,8 @@
 import Header from './components/Header/Header';
 import Accordion from './components/Accordion/Accordion';
 import Input from './components/Input/Input';
+import Textarea from './components/Textarea/Textarea';
+
 
 
 // Core screens.
@@ -21,6 +23,7 @@ export {
   Header,
   Accordion,
   Input,
+  Textarea,
 
   // Core screens
   BaseScreen,

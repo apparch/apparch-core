@@ -24,13 +24,22 @@
                   "service_uri": "/relative-uri",
                   "components": [
                     {
-                      "id": "unique_component_id",
+                      "id": "username",
                       "type": "input",
                       "setting": {
                         "label": "Username",
-                        "labelType": "fixed",
-                        "placeholder":"Please enter your username.",
+                        "labelType": "floating",
+                        "placeholder": "Please enter your username.",
                         "last": true
+                      }
+                    },
+                    {
+                      "id": "description",
+                      "type": "textarea",
+                      "setting": {
+                        "placeholder": "Please add dummy description here.",
+                        "rowSpan": 5,
+                        "bordered": true
                       }
                     }
                   ]
